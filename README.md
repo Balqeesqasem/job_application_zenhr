@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Job Board backend API 
 
-Things you may want to cover:
+Job seekers can sign up: 
+  
+  Endpoint:
 
-* Ruby version
+  Requirement: 
 
-* System dependencies
+    The new user should send his email and password to pe part of our application.
 
-* Configuration
+Job seekers can sign in: 
+  
+  Endpoint:
 
-* Database creation
+  Requirement: 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    The new user should send his email and password to be able using the app.    
