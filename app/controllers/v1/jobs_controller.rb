@@ -1,4 +1,3 @@
-require "pry"
 class V1::JobsController <  V1::ApplicationController
   before_action :authenticate_admin!, only: [:create]
 
@@ -8,16 +7,17 @@ class V1::JobsController <  V1::ApplicationController
     if job.save
       render json: JobSerializer.render(job)
     else
-      render json: {error: job.errors.full_messages}, status: :unauthorized
+      render json: {error: job.errors.full_messages}, status: :bad_request
     end
   end
 
+  # /v1/jobs/:id , method: put
   def update
     job = Job.find params[:id]
     if job.update(job_params)
       render json: JobSerializer.render(job)
     else
-      render json: {error: job.errors.full_messages}, status: :unauthorized
+      render json: {error: job.errors.full_messages}, status: :bad_request
     end
   end
 
