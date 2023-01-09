@@ -1,3 +1,4 @@
+require "pry"
 class V1::JobsController <  V1::ApplicationController
   before_action :authenticate_admin!, except: [:index]
   before_action :set_job, only: [:update, :destroy]
@@ -33,7 +34,7 @@ class V1::JobsController <  V1::ApplicationController
 
   # /v1/jobs , method: get
   def index
-    jobs = Job.all
+    jobs = Job.where('expired_at > ? OR expired_at IS ?', Time.current, nil)
     jobs = jobs.filter_records(job_filters) if job_filters.present?
     render json: JobSerializer.render(jobs)
   end
