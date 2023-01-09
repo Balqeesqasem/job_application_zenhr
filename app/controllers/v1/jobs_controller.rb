@@ -1,5 +1,6 @@
 class V1::JobsController <  V1::ApplicationController
-  before_action :authenticate_admin!, only: [:create]
+  before_action :authenticate_admin!, except: [:index]
+  before_action :set_job, only: [:update, :destroy]
 
   # /v1/jobs , method: post
   def create
@@ -13,18 +14,34 @@ class V1::JobsController <  V1::ApplicationController
 
   # /v1/jobs/:id , method: put
   def update
-    job = Job.find params[:id]
-    if job.update(job_params)
-      render json: JobSerializer.render(job)
+    if @job.update(job_params)
+      render json: JobSerializer.render(@job)
     else
-      render json: {error: job.errors.full_messages}, status: :bad_request
+      render json: {error: @job.errors.full_messages}, status: :bad_request
     end
   end
+
+  # /v1/jobs/:id , method: delete
+  def destroy
+    if @job.destroy
+      head :ok
+    else
+      render_error(@job.errors)
+    end
+  end
+
 
   # /v1/jobs , method: get
   def index
     jobs = Job.all
     render json: JobSerializer.render(jobs)
+  end
+
+
+  private
+
+  def set_job
+    @job = Job.find params[:id]
   end
 
   def job_params
