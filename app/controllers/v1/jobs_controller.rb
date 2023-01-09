@@ -46,7 +46,7 @@ class V1::JobsController <  V1::ApplicationController
   end
 
   def job_params
-    params.permit(:job_title, :job_type, :company_name, :job_description)
+    params.permit(:job_title, :expired_at, :job_description)
   end
 
   def job_filters

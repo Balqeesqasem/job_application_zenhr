@@ -2,12 +2,8 @@
 
 one:
   job_title: MyString
-  job_type: 1
-  company: MyString
   job_description: MyText
 
 two:
   job_title: MyString
-  job_type: 1
-  company: MyString
   job_description: MyText
