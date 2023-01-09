@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :jobs, only: [:create, :index, :update, :destroy] do 
       resources :job_applications, only: [:create]
     end
+    resources :job_applications, only: [:index, :show]
     resources :users, path: "/", only: [] do
       collection do
         get :current
