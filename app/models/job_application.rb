@@ -8,4 +8,8 @@ class JobApplication < ApplicationRecord
 
   #Enum 
   enum status: STATUS
+
+  def update_status 
+    self.update(status: SEEN)
+  end
 end
