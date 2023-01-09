@@ -1,5 +1,5 @@
 class JobApplication < ApplicationRecord
-  STATUS = [PENDING = "pending", APPROVED = "approved", REJECTED = "rejected"]
+  STATUS = [NOT_SEEN = "not_seen", SEEN = "seen"]
   belongs_to :user
   belongs_to :job
 
