@@ -4,7 +4,9 @@ Job Board backend API
 
 Job seekers can sign up: 
   
-  Endpoint:
+  Endpoint:   
+     
+    /auth
 
   Requirement: 
 
@@ -12,7 +14,9 @@ Job seekers can sign up:
 
 Job seekers can sign in: 
   
-  Endpoint:
+  Endpoint:  
+  
+    /auth/sign_in
 
   Requirement: 
 
