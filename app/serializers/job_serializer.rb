@@ -1,3 +1,3 @@
 class JobSerializer < ApplicationSerializer
-  fields :job_title, :job_type, :company_name, :job_description
+  fields :job_title, :job_description, :expired_at
 end

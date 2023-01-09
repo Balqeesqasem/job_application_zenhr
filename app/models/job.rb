@@ -1,15 +1,9 @@
 class Job < ApplicationRecord
-  # Constant
-  JOB_TYPES = [FULL_TIME = "full_time", PART_TIME = "part_time"]
-
   # Associations
   has_many :job_applications, dependent: :destroy
 
   # Validations
-  validates :job_title, :job_description, :company_name ,presence: true
-
-  # Enum
-  enum job_type: JOB_TYPES
+  validates :job_title, :job_description ,presence: true
 
   # Filtering attributes
   concerning :Filtering do
