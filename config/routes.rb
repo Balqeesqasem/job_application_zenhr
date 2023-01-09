@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   namespace :v1 do
-    resources :jobs, only: [:create, :index, :update]
+    resources :jobs, only: [:create, :index, :update] do 
+      resources :job_applications, only: [:create]
+    end
     resources :users, path: "/", only: [] do
       collection do
         get :current
