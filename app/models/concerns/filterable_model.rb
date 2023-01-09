@@ -1,4 +1,3 @@
-require "pry"
 module FilterableModel
   class Error < StandardError; end
   class FilterNotSupported < Error; end
