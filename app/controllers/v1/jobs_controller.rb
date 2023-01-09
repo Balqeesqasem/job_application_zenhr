@@ -1,4 +1,3 @@
-require "pry"
 class V1::JobsController <  V1::ApplicationController
   before_action :authenticate_admin!, except: [:index]
   before_action :set_job, only: [:update, :destroy]
