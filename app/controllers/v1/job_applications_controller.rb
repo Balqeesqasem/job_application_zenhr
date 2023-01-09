@@ -1,5 +1,4 @@
 class V1::JobApplicationsController <  V1::ApplicationController
-  before_action :authenticate_admin!, only: [:create]
 
   # /v1/jobs/:job_id/job_applications , method: post
   def create 
