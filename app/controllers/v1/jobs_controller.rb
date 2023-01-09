@@ -34,6 +34,7 @@ class V1::JobsController <  V1::ApplicationController
   # /v1/jobs , method: get
   def index
     jobs = Job.all
+    jobs = jobs.filter_records(job_filters) if job_filters.present?
     render json: JobSerializer.render(jobs)
   end
 
@@ -47,5 +48,9 @@ class V1::JobsController <  V1::ApplicationController
   def job_params
     params.permit(:job_title, :job_type, :company_name, :job_description)
   end
+
+  def job_filters
+    params.permit(:created_at, :job_title)
+  end 
 
 end
