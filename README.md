@@ -1,6 +1,6 @@
 # **Job Board backend API**
 
-**Admin credential: **
+**Admin credential:**
 
     Email: admin.zainhr@gmail.com
     Password: 123456789
@@ -22,7 +22,7 @@ You can do all required functionality( add job, view job applications, update jo
 
 
 
-**Job seekers can sign in by the following: **
+**Job seekers can sign in by the following:**
 
 ###### Endpoint:
 
