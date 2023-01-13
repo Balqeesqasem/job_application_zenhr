@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  def health_check
-    head :ok
-  end
+  include DeviseTokenAuth::Concerns::SetUserByToken
+  protect_from_forgery prepend: true
 end
