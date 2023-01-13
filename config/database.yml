@@ -7,3 +7,7 @@ development:
   <<: *default
   database: job_application
 
+test:
+  <<: *default
+  database: job_application_test  
+
