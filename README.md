@@ -30,7 +30,7 @@ You can do all required functionality( add job, view job applications, update jo
 
 ###### Requirement:
 
-   The new user should send his **email** and **password** to be able using the app.
+   The new user should send his **email** and **password** to access his functionality like list jobs and apply to it.
 
 
 ------------
