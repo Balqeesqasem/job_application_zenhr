@@ -2,7 +2,7 @@
 
 **Admin credential:**
 
-    Email: admin.zainhr@gmail.com
+    Email: admin.zenhr@gmail.com
     Password: 123456789
 
 You can do all required functionality( add job, view job applications, update job)  
